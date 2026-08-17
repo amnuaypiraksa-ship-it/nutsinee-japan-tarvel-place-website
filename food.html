@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  background-color: #ffa9d4;
+}
+
+.navbar a {
+  color: rgb(124, 6, 51);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #661845;
+  color: black;
+}
+
+.container {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background-color: #e7dee5;
+  padding: 20px;
+}
+
+.main {
+  flex: 70%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.fakeimg {
+  background-color: hsl(325, 100%, 84%);
+  width: 100%;
+  padding: 20px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #ffdaed;
+}
+
+@media screen and (max-width: 700px) {
+  .container, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="c:\Users\PC\Downloads\Colorful Collage Japanese Travel Banner.jpg" width="2900" height="auto">
+</header>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Popular Place In Japan</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fff0f5; 
+            color: #4a373a;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- 💡 แถบเมนูด้านบนที่ยาวชิดขอบ --- */
+        .navbar {
+            background-color: #ffb6c1; 
+            width: 100%;               
+        }
+        .navbar ul {
+            list-style-type: none; margin: 0; padding: 0; display: flex;
+        }
+        .navbar li a {
+            display: block; color: #4a373a; text-decoration: none; padding: 15px 20px;
+        }
+
+        /* ======================================================== */
+        /* ตัวสำคัญ: แก้ไขตรงนี้เพื่อให้เนื้อหาด้านล่างขยายชิดขอบจอ */
+        /* ======================================================== */
+        .container {
+            width: 100%;           /* ขยายเต็มหน้าจอ */
+            padding: 40px;         /* เว้นระยะจากขอบจอเล็กน้อยเพื่อความสวยงาม */
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #d15a77;
+            margin-bottom: 20px;
+        }
+
+        /* โซนบน: รูปใหญ่ (ซ้าย) + กลุ่มรูปเล็ก (ขวา) */
+        .main-layout-top {
+            display: flex;
+            gap: 40px; 
+            margin-bottom: 40px;
+        }
+
+        .left-main-image {
+            flex: 3; /* ปรับสัดส่วนให้รูปใหญ่กว้างขึ้นเต็มตา */
+        }
+        .left-main-image img {
+            width: 100%; height: auto; border-radius: 16px; display: block;
+        }
+
+        .right-gallery-side {
+            flex: 1; /* ส่วนของกลุ่มรูปเล็ก */
+            display: flex; flex-direction: column;
+        }
+
+        .text-hint {
+            font-size: 12px; color: #8c6b70; margin-bottom: 10px;
+        }
+
+        .small-images-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;
+        }
+        .small-images-grid img {
+            width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s;
+        }
+        .small-images-grid img:hover {
+            transform: scale(1.08);
+        }
+
+        /* โซนล่าง: ข้อความรายละเอียด + กล่อง Image 1-3 */
+        .middle-content {
+            display: flex; gap: 40px;
+        }
+        .text-section { flex: 3; }
+        .boxes-section { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+        
+        .image-box {
+            background-color: #ffe4e1; border: 1px solid #fcd0d6; border-radius: 12px;
+            padding: 20px; text-align: center; color: #b1435d; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- แถบเมนูยาวชิดขอบ -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="website.html">home</a></li>
+            <li><a href="tralvel advice.html">travel advice</a></li>
+            <li><a href="food.html">food</a></li>
+            <li><a href="hotel.html">hotel</a></li>
+            <li><a href="contact us.html">contact us</a></li>
+        </ul>
+    </nav>
+
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* -------------------------------------- */
+        /*  โครงสร้างหลักและการทำให้นูน (Hover Effect) */
+        /* -------------------------------------- */
+        .hotel-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: #d16b7b;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* ตัวกล่องที่พัก (เมื่อเมาส์ชี้จะนูนขึ้น) */
+        .hotel-card {
+            background-color: #ffffff;
+            border: 1px solid #e2b2b8;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-8px); /* ลอยนูนขึ้น */
+            box-shadow: 0 12px 24px rgba(209, 107, 123, 0.2); /* เงาเข้มขึ้น */
+        }
+
+        /* -------------------------------------- */
+        /*  ระบบสไลด์ภาพ 5 รูป วนลูป (Slider Setup)  */
+        /* -------------------------------------- */
+        .card-slider-wrapper {
+            width: 100%;
+            height: 180px;            /* ความสูงของส่วนแสดงรูปภาพ */
+            overflow: hidden;         /* ซ่อนรูปที่เหลือด้านข้าง */
+            position: relative;
+        }
+
+        .card-slider-container {
+            display: flex;
+            width: 500%;              /* กว้าง 500% เพราะมี 5 รูปเรียงกัน */
+            height: 100%;
+            /* เรียกใช้ Animation วนลูป 5 รูป ใช้เวลา 15 วินาที */
+            animation: card-slide-5-loop 15s infinite ease-in-out;
+        }
+
+        .card-slider-container img {
+            width: 20%;               /* แต่ละรูปกินพื้นที่ 1 ใน 5 (20%) */
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* -------------------------------------- */
+        /*  Timeline การเล่นสไลด์ 5 รูป วนลูป      */
+        /* -------------------------------------- */
+        @keyframes card-slide-5-loop {
+            0%, 15%   { transform: translateX(0%); }       /* รูปที่ 1 */
+            20%, 35%  { transform: translateX(-20%); }     /* รูปที่ 2 */
+            40%, 55%  { transform: translateX(-40%); }     /* รูปที่ 3 */
+            60%, 75%  { transform: translateX(-60%); }     /* รูปที่ 4 */
+            80%, 95%  { transform: translateX(-80%); }     /* รูปที่ 5 */
+            100%      { transform: translateX(0%); }       /* วนกลับรูปที่ 1 */
+        }
+
+        /* ส่วนเนื้อหาด้านล่างรูป */
+        .hotel-content {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hotel-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin: 0 0 5px 0;
+        }
+
+        .hotel-location {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 12px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn-link { background-color: #d16b7b; color: white; }
+        .btn-map { border: 1px solid #d16b7b; color: #d16b7b; background-color: white; }
+
+        @media (max-width: 900px) { .hotel-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .hotel-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<html>
+<!-- ============================================================== -->
+<!--  นำโค้ดส่วนนี้ไปวางไว้ "ต่อใต้เมนูสีชมพู" ในไฟล์ HTML ของคุณ     -->
+<!-- ============================================================== -->
+
+<!-- Google Fonts เพิ่มความน่ารักน่าอ่าน -->
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ตั้งค่ารูปแบบโครงสร้างหน้าเว็บ */
+  .japan-travel-section {
+    font-family: 'Kanit', sans-serif;
+    max-width: 1140px;
+    margin: 25px auto 50px auto;
+    padding: 0 15px;
+    position: relative;
+    color: #4a4a4a;
+  }
+
+  /* 1. สไลด์โชว์รูปใหญ่ (Loop 4 รูป) */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4);
+    border: 4px solid #ffffff;
+  }
+
+  .carousel-track {
+    display: flex;
+    width: 400%; /* 4 รูป = 400% */
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .carousel-slide {
+    width: 25%;
+    height: 100%;
+    position: relative;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 25px 20px 25px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0,0,0,0) 100%);
+    color: #ffffff;
+  }
+
+  .slide-caption h3 {
+    font-size: 22px;
+    margin-bottom: 4px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+
+  .slide-caption p {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 300;
+  }
+
+  /* ปุ่มกดเปลี่ยนรูป */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #d85c82;
+    border: 2px solid #ffc0cb;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+  }
+
+  .nav-btn:hover {
+    background-color: #ff69b4;
+    color: #ffffff;
+    border-color: #ff69b4;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .prev-btn { left: 15px; }
+  .next-btn { right: 15px; }
+
+  /* จุดระบุตำแหน่งรูป (4 Dots) */
+  .dots-container {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .dot.active {
+    background-color: #ff69b4;
+    width: 28px;
+    border-radius: 10px;
+  }
+
+  /* 2. หัวข้อสไตล์ชมพูซากุระ */
+  .section-header {
+    text-align: center;
+    margin: 40px 0 25px 0;
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #d85c82;
+    display: inline-block;
+    background: #fff0f5;
+    padding: 8px 25px;
+    border-radius: 30px;
+    border: 2px dashed #ffb6c1;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+  }
+
+  /* 3. การ์ด 4 รูป (เอฟเฟกต์นูนขึ้นเมื่อเลื่อนเมาส์ผ่าน) */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .cafe-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 2px solid #ffe4e8;
+    box-shadow: 0 4px 12px rgba(255, 182, 193, 0.15);
+    /* Effect นูนและลอยขึ้น */
+    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* เมื่อ hover เอาเมาส์ไปชี้ -> นูนขึ้น + ขยายขอบสีชมพู */
+  .cafe-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 16px 30px rgba(232, 62, 140, 0.25);
+    border-color: #ffb6c1;
+  }
+
+  .card-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+  }
+
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .cafe-card:hover .card-img-wrapper img {
+    transform: scale(1.08);
+  }
+
+  .badge-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #d85c82;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+
+  /* ปุ่ม Google Maps ไปยังร้าน */
+  .map-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #ff8da1 0%, #ff5c8d 100%);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(255, 92, 141, 0.3);
+  }
+
+  .map-btn:hover {
+    background: linear-gradient(135deg, #ff5c8d 0%, #d81b60 100%);
+    box-shadow: 0 5px 12px rgba(216, 27, 96, 0.4);
+    transform: scale(1.03);
+  }
+
+  /* 4. ส่วนแสดง Google Maps ฝังพิกัด */
+  .map-section {
+    margin-top: 45px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 22px;
+    border: 2px solid #ffe4e8;
+    box-shadow: 0 6px 20px rgba(255, 182, 193, 0.2);
+  }
+
+  .map-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .map-header-info h3 {
+    color: #d85c82;
+    font-size: 19px;
+  }
+
+  .map-frame-wrapper {
+    width: 100%;
+    height: 360px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #ffccd5;
+  }
+
+  .map-frame-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* รองรับมือถือและหน้าจอขนาดเล็ก */
+  @media (max-width: 992px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .carousel-container { height: 320px; }
+  }
+  @media (max-width: 576px) {
+    .cards-grid { grid-template-columns: 1fr; }
+    .carousel-container { height: 240px; }
+  }
+</style>
+
+<div class="japan-travel-section">
+
+  <!-- 1. สไลด์โชว์รูปใหญ่ (วนลูป 4 รูป) -->
+  <div class="carousel-container" id="japanCarousel">
+    <div class="carousel-track" id="carouselTrack">
+      
+      <!-- Slide 1 -->
+      <div class="carousel-slide">
+        <img src="c:\Users\PC\Downloads\320x320_square_bc983b537ed8a00be2311001481d8115.jpg" alt="Kyoto Sakura Walk">
+        <div class="slide-caption">
+          <h3>🌸 Fukuoka restaurant</h3>
+          <p>Hamburg & Omurice no Omise Ikura Shibuya ten and taste very good</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <img src="c:\Users\PC\Downloads\rilakkuma-cafe.jpg" alt="Tokyo Tower & Sakura">
+        <div class="slide-caption">
+          <h3>🗼 rilakkuma cafe</h3>
+          <p>had a nice dish of rilakkuma cafe</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <img src="c:\Users\PC\Downloads\SAMURAICAFESamuraiShowE-ticketinOsaka.jpg" alt="Mt Fuji & Sakura">
+        <div class="slide-caption">
+          <h3>🗻 samurai cafe</h3>
+          <p>a highly interactive theater experience located in the Kita Ward of Osaka</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-slide">
+        <img src="c:\Users\PC\Downloads\asakusa-entrance-1024x768.webp" alt="Osaka Dotonbori Cafe">
+        <div class="slide-caption">
+          <h3>🍡 Ninja Experience Cafe Tokyo Asakusa</h3>
+          <p>a highly rated, family-friendly interactive entertainment venue located near Sensō-ji Temple</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ปุ่มเปลี่ยนรูป Left / Right -->
+    <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+    <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+
+    <!-- จุดแสดงตำแหน่ง slide (4 จุด) -->
+    <div class="dots-container" id="dotsContainer">
+      <div class="dot active" data-index="0"></div>
+      <div class="dot" data-index="1"></div>
+      <div class="dot" data-index="2"></div>
+      <div class="dot" data-index="3"></div>
+    </div>
+  </div>
+
+  <!-- 2. หัวข้อและการ์ด 4 รูป (นูนขึ้น + ปุ่ม Google Maps) -->
+  <div class="section-header">
+    <h2 class="section-title">🌸 คาเฟ่ & ร้านอาหารยอดนิยม สไตล์ซากุระน่ารัก</h2>
+  </div>
+
+  <div class="cards-grid">
+    
+    <!-- Card 1 -->
+    <div class="cafe-card">
+      <div class="card-img-wrapper">
+        <span class="badge-tag">Fukuoka restaurant</span>
+        <img src="c:\Users\PC\Downloads\4fd4e97580f4cbefea5583b21209325a.jpg" alt="Sakura Tea House Kyoto">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Fukuoka restaurant</h4>
+        <p class="card-desc">Hamburg & Omurice no Omise Ikura Shibuya ten</p>
+        <a href="https://maps.google.com/?q=Kiyomizu-dera+Kyoto" target="_blank" class="map-btn">
+          📍 กด
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="cafe-card">
+      <div class="card-img-wrapper">
+        <span class="badge-tag">harukoma sushi</span>
+        <img src="c:\Users\PC\Downloads\Kita_PTE_Harukoma2-L.jpg" alt="Pink Blossom Cafe Tokyo">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">harukoma sushi</h4>
+        <p class="card-desc">so many sushi</p>
+        <a href="https://maps.app.goo.gl/NNPVGYueiABEfodN9" target="_blank" class="map-btn">
+          📍 กด
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="cafe-card">
+      <div class="card-img-wrapper">
+        <span class="badge-tag">jojo's bizarre adventure ramen shop</span>
+        <img src="c:\Users\PC\Downloads\640x640_rect_0c45af8bf23f85688d771f1b4f069042.jpg" alt="Fujisan Ramen & Cafe">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">jojo's bizarre adventure ramen shop</h4>
+        <p class="card-desc">ramen with jojo style and so much figure</p>
+        <a href="https://maps.app.goo.gl/UfaswsrKRjGLm4hC9" target="_blank" class="map-btn">
+          📍 กด
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="cafe-card">
+      <div class="card-img-wrapper">
+        <span class="badge-tag">iggy cafe</span>
+        <img src="c:\Users\PC\Downloads\640x640_rect_9a0c3d1ccdf95b7d464e2f92e61da068.jpg" alt="Osaka Dotonbori Onigiri & Dessert">
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">iggy cafe</h4>
+        <p class="card-desc">iggy cafe with a good view</p>
+        <a href="https://maps.app.goo.gl/dc36JP9huYUSYLn97" target="_blank" class="map-btn">
+          📍 กด
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- JavaScript ควบคุมสไลด์โชว์ 4 รูป -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dots = document.querySelectorAll('.dot');
+    const container = document.getElementById('japanCarousel');
+
+    let currentIndex = 0;
+    const totalSlides = 4; // วนลูป 4 รูป
+    let autoSlideInterval;
+
+    function updateCarousel(index) {
+      currentIndex = index;
+      if (currentIndex >= totalSlides) currentIndex = 0;
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+
+      track.style.transform = `translateX(-${currentIndex * 25}%)`;
+
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    nextBtn.addEventListener('click', () => updateCarousel(currentIndex + 1));
+    prevBtn.addEventListener('click', () => updateCarousel(currentIndex - 1));
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        const idx = parseInt(e.target.getAttribute('data-index'));
+        updateCarousel(idx);
+      });
+    });
+
+    // เลื่อนอัตโนมัติทุกๆ 3.5 วินาที
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        updateCarousel(currentIndex + 1);
+      }, 3500);
+    }
+
+    container.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+    container.addEventListener('mouseleave', startAutoSlide);
+
+    startAutoSlide();
+  });
+</script>
+</html>
+
+    <!-- โซน Footer -->
+    <footer>
+        <p> 2026 Travel Japan | Pak Chong, Nakhon Ratchasima, Thailand</p>
+    </footer>
+
+</body>
+</html>

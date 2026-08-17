@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  background-color: #ffa9d4;
+}
+
+.navbar a {
+  color: rgb(124, 6, 51);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #661845;
+  color: black;
+}
+
+.container {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background-color: #e7dee5;
+  padding: 20px;
+}
+
+.main {
+  flex: 70%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.fakeimg {
+  background-color: hsl(325, 100%, 84%);
+  width: 100%;
+  padding: 20px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #ffdaed;
+}
+
+@media screen and (max-width: 700px) {
+  .container, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="c:\Users\PC\Downloads\Colorful Collage Japanese Travel Banner.jpg" width="2900" height="auto">
+</header>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Popular Place In Japan</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fff0f5; 
+            color: #4a373a;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- 💡 แถบเมนูด้านบนที่ยาวชิดขอบ --- */
+        .navbar {
+            background-color: #ffb6c1; 
+            width: 100%;               
+        }
+        .navbar ul {
+            list-style-type: none; margin: 0; padding: 0; display: flex;
+        }
+        .navbar li a {
+            display: block; color: #4a373a; text-decoration: none; padding: 15px 20px;
+        }
+
+        /* ======================================================== */
+        /* ตัวสำคัญ: แก้ไขตรงนี้เพื่อให้เนื้อหาด้านล่างขยายชิดขอบจอ */
+        /* ======================================================== */
+        .container {
+            width: 100%;           /* ขยายเต็มหน้าจอ */
+            padding: 40px;         /* เว้นระยะจากขอบจอเล็กน้อยเพื่อความสวยงาม */
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #d15a77;
+            margin-bottom: 20px;
+        }
+
+        /* โซนบน: รูปใหญ่ (ซ้าย) + กลุ่มรูปเล็ก (ขวา) */
+        .main-layout-top {
+            display: flex;
+            gap: 40px; 
+            margin-bottom: 40px;
+        }
+
+        .left-main-image {
+            flex: 3; /* ปรับสัดส่วนให้รูปใหญ่กว้างขึ้นเต็มตา */
+        }
+        .left-main-image img {
+            width: 100%; height: auto; border-radius: 16px; display: block;
+        }
+
+        .right-gallery-side {
+            flex: 1; /* ส่วนของกลุ่มรูปเล็ก */
+            display: flex; flex-direction: column;
+        }
+
+        .text-hint {
+            font-size: 12px; color: #8c6b70; margin-bottom: 10px;
+        }
+
+        .small-images-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;
+        }
+        .small-images-grid img {
+            width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s;
+        }
+        .small-images-grid img:hover {
+            transform: scale(1.08);
+        }
+
+        /* โซนล่าง: ข้อความรายละเอียด + กล่อง Image 1-3 */
+        .middle-content {
+            display: flex; gap: 40px;
+        }
+        .text-section { flex: 3; }
+        .boxes-section { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+        
+        .image-box {
+            background-color: #ffe4e1; border: 1px solid #fcd0d6; border-radius: 12px;
+            padding: 20px; text-align: center; color: #b1435d; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- แถบเมนูยาวชิดขอบ -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="website.html">home</a></li>
+            <li><a href="tralvel advice.html">travel advice</a></li>
+            <li><a href="food.html">food</a></li>
+            <li><a href="hotel.html">hotel</a></li>
+            <li><a href="contact us.html">contact us</a></li>
+        </ul>
+    </nav>
+
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* -------------------------------------- */
+        /*  โครงสร้างหลักและการทำให้นูน (Hover Effect) */
+        /* -------------------------------------- */
+        .hotel-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: #d16b7b;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* ตัวกล่องที่พัก (เมื่อเมาส์ชี้จะนูนขึ้น) */
+        .hotel-card {
+            background-color: #ffffff;
+            border: 1px solid #e2b2b8;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-8px); /* ลอยนูนขึ้น */
+            box-shadow: 0 12px 24px rgba(209, 107, 123, 0.2); /* เงาเข้มขึ้น */
+        }
+
+        /* -------------------------------------- */
+        /*  ระบบสไลด์ภาพ 5 รูป วนลูป (Slider Setup)  */
+        /* -------------------------------------- */
+        .card-slider-wrapper {
+            width: 100%;
+            height: 180px;            /* ความสูงของส่วนแสดงรูปภาพ */
+            overflow: hidden;         /* ซ่อนรูปที่เหลือด้านข้าง */
+            position: relative;
+        }
+
+        .card-slider-container {
+            display: flex;
+            width: 500%;              /* กว้าง 500% เพราะมี 5 รูปเรียงกัน */
+            height: 100%;
+            /* เรียกใช้ Animation วนลูป 5 รูป ใช้เวลา 15 วินาที */
+            animation: card-slide-5-loop 15s infinite ease-in-out;
+        }
+
+        .card-slider-container img {
+            width: 20%;               /* แต่ละรูปกินพื้นที่ 1 ใน 5 (20%) */
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* -------------------------------------- */
+        /*  Timeline การเล่นสไลด์ 5 รูป วนลูป      */
+        /* -------------------------------------- */
+        @keyframes card-slide-5-loop {
+            0%, 15%   { transform: translateX(0%); }       /* รูปที่ 1 */
+            20%, 35%  { transform: translateX(-20%); }     /* รูปที่ 2 */
+            40%, 55%  { transform: translateX(-40%); }     /* รูปที่ 3 */
+            60%, 75%  { transform: translateX(-60%); }     /* รูปที่ 4 */
+            80%, 95%  { transform: translateX(-80%); }     /* รูปที่ 5 */
+            100%      { transform: translateX(0%); }       /* วนกลับรูปที่ 1 */
+        }
+
+        /* ส่วนเนื้อหาด้านล่างรูป */
+        .hotel-content {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hotel-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin: 0 0 5px 0;
+        }
+
+        .hotel-location {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 12px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn-link { background-color: #d16b7b; color: white; }
+        .btn-map { border: 1px solid #d16b7b; color: #d16b7b; background-color: white; }
+
+        @media (max-width: 900px) { .hotel-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .hotel-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="hotel-section">
+        <h2 class="section-title">✨ แนะนำที่พักในญี่ปุ่น (Recommended Hotels) ✨</h2>
+        
+        <div class="hotel-grid">
+            
+            <!-- ช่องที่ 1: โตเกียว (ใส่รูป 5 รูปด้านใน) -->
+            <div class="hotel-card">
+                <div class="card-slider-wrapper">
+                    <div class="card-slider-container">
+                        <img src="c:\Users\PC\Downloads\OGP軽井沢_en_rwpzgn.avif" alt="Tokyo 1">
+                        <img src="c:\Users\PC\Downloads\星のや東京_客室_菊1_msrhuy.avif" alt="Tokyo 2">
+                        <img src="c:\Users\PC\Downloads\tokyo_feature_2-1_tnfdcf.avif" alt="Tokyo 3">
+                        <img src="c:\Users\PC\Downloads\_R6_8899_ja0ozn.avif" alt="Tokyo 4">
+                        <img src="c:\Users\PC\Downloads\tokyo_feature_1-3_pzqnac.avif" alt="Tokyo 5">
+                    </div>
+                </div>
+                <div class="hotel-content">
+                    <div>
+                        <p class="hotel-name">hoshinoya tokyo</p>
+                        <p class="hotel-location">📍 โตเกียว (Tokyo)</p>
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://hoshinoresorts.com/en/hotels/hoshinoyabali/" target="_blank" class="btn btn-link">ดูที่พัก</a>
+                        <a href="https://maps.app.goo.gl/AGLQXARUSDmmaC1aA" target="_blank" class="btn btn-map">แผนที่ Map</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ช่องที่ 2: เกียวโต (ใส่รูป 5 รูปด้านใน) -->
+            <div class="hotel-card">
+                <div class="card-slider-wrapper">
+                    <div class="card-slider-container">
+                        <img src="c:\Users\PC\Downloads\13642026c2e611c98403c390a17e2279.jpg" alt="Kyoto 1">
+                        <img src="c:\Users\PC\Downloads\1bd749746d5f4d7e2c8e28a545c72e8c.jpg" alt="Kyoto 2">
+                        <img src="c:\Users\PC\Downloads\169f15fcac9a6672f999d0dff0503883.jpg" alt="Kyoto 3">
+                        <img src="c:\Users\PC\Downloads\4a72b628351897a3e44db57cd906a125.jpg" alt="Kyoto 4">
+                        <img src="c:\Users\PC\Downloads\e106a94f864513416655163e4575cf26.jpg" alt="Kyoto 5">
+                    </div>
+                </div>
+                <div class="hotel-content">
+                    <div>
+                        <p class="hotel-name">GRAX Premium Camp Resort</p>
+                        <p class="hotel-location">📍 เกียวโต (Kyoto)</p>
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://www.grax.jp/" target="_blank" class="btn btn-link">ดูที่พัก</a>
+                        <a href="https://maps.app.goo.gl/wbFeAG6wA1ytQfhQ6" target="_blank" class="btn btn-map">แผนที่ Map</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ช่องที่ 3: โอซาก้า (ใส่รูป 5 รูปด้านใน) -->
+            <div class="hotel-card">
+                <div class="card-slider-wrapper">
+                    <div class="card-slider-container">
+                        <img src="c:\Users\PC\Downloads\1mc1i12000bbcb3v7C77F_W_1280_853_R5.webp" alt="Osaka 1">
+                        <img src="c:\Users\PC\Downloads\1mc3a12000bbca2k57553_W_1280_853_R5.webp" alt="Osaka 2">
+                        <img src="c:\Users\PC\Downloads\1mc2x12000b8uy66v4F94_W_1280_853_R5.webp" alt="Osaka 3">
+                        <img src="c:\Users\PC\Downloads\1mc3212000g355g8v9529_W_1280_853_R5.webp" alt="Osaka 4">
+                        <img src="c:\Users\PC\Downloads\0586o12000cxiyfaxC5B6_W_1280_853_R5.webp" alt="Osaka 5">
+                    </div>
+                </div>
+                <div class="hotel-content">
+                    <div>
+                        <p class="hotel-name">MIMARU Osaka Shinsaibashi North</p>
+                        <p class="hotel-location">📍 โอซาก้า (Osaka)</p>
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://mimaruhotels.com/" target="_blank" class="btn btn-link">ดูที่พัก</a>
+                        <a href="https://www.google.com/travel/search?ts=CAESCgoCCAMKAggDEAAaHBIaEhQKBwjqDxAIGAISBwjqDxAIGAMYATICEAAqBwoFOgNUSEI&qs=CAEyFENnc0k2cy1qaXNEanV1UFdBUkFCOAlCCRF3El3MMUP-6UIJEdZT_CvtQFqWQgkRtoTaLhVkty5qHAoaDStiPkYSEwi5oOWtr-CVAxU2YVAHHRv8Npo&utm_campaign=sharing&utm_medium=link_btn&utm_source=htls" target="_blank" class="btn btn-map">แผนที่ Map</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ช่องที่ 4: ฮอกไกโด (ใส่รูป 5 รูปด้านใน) -->
+            <div class="hotel-card">
+                <div class="card-slider-wrapper">
+                    <div class="card-slider-container">
+                        <img src="c:\Users\PC\Downloads\268414607.jpg" alt="Hokkaido 1">
+                        <img src="c:\Users\PC\Downloads\images (6).jpg" alt="Hokkaido 2">
+                        <img src="c:\Users\PC\Downloads\main05_v4sp.jpg" alt="Hokkaido 3">
+                        <img src="c:\Users\PC\Downloads\photo01a.jpg" alt="Hokkaido 4">
+                        <img src="c:\Users\PC\Downloads\268407797.jpg" alt="Hokkaido 5">
+                    </div>
+                </div>
+                <div class="hotel-content">
+                    <div>
+                        <p class="hotel-name">forest spa resort hokkaido hotel</p>
+                        <p class="hotel-location">📍 ฮอกไกโด (Hokkaido)</p>
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://www.hokkaidohotel.co.jp/english/" target="_blank" class="btn btn-link">ดูที่พัก</a>
+                        <a href="https://www.google.com/travel/hotels/s/SExnRWUt4oMswdcP7" target="_blank" class="btn btn-map">แผนที่ Map</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+</html>
+
+    <!-- โซน Footer -->
+    <footer>
+        <p>&copy; 2026 Travel Japan | Pak Chong, Nakhon Ratchasima, Thailand</p>
+    </footer>
+
+</body>
+</html>
